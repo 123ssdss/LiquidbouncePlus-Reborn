@@ -70,8 +70,16 @@ dependencies {
         exclude module: "authlib"
     }
 
-    include 'com.github.TheAltening:TheAltening4j:d0771f42d3'
-    include 'com.github.TheAltening:TheAlteningAuth4j:-SNAPSHOT'
+    // ============================================================
+    // [FIXED] TheAltening 依赖坐标修复
+    // 原错误写法（已删除）：
+    //   include 'com.github.TheAltening:TheAltening4j:d0771f42d3'
+    //   include 'com.github.TheAltening:TheAlteningAuth4j:-SNAPSHOT'
+    //
+    // 原因：JitPack 上该 Artifact 名/版本无效，导致解析失败。
+    // 改为 Maven Central 官方发布的坐标（版本号明确，最稳定）。
+    // ============================================================
+    include 'com.thealtening.api:api:4.1.0'
 
     include 'com.github.ben-manes.caffeine:caffeine:2.9.0'
 
