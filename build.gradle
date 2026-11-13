@@ -79,7 +79,7 @@ dependencies {
     // 原因：JitPack 上该 Artifact 名/版本无效，导致解析失败。
     // 改为 Maven Central 官方发布的坐标（版本号明确，最稳定）。
     // ============================================================
-    include 'com.thealtening.auth:auth:3.0.2'
+    include 'com.github.TheAltening:TheAltening4j:master-SNAPSHOT'
 
     include 'com.github.ben-manes.caffeine:caffeine:2.9.0'
 
